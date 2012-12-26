@@ -5,6 +5,7 @@ from emailconfirmation.models import EmailAddress, EmailConfirmation
 
 class EmailAddressAdmin(admin.ModelAdmin):
 
+        search_fields = ('email', 'user__username', 'user__id',)
         raw_id_fields = ('user',)
 
 
